@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>@ViewBag.Title</title>
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+
+    <link href="~/Content/custom.css" rel="stylesheet" />
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row bark">
+            <div class="col-md-3 col-md-offset-9">
+                <a class="pre-nav-links" href="#">Puzzle of the Day</a>
+                <a class="pre-nav-links" href="#">FAQ</a>
+                <a class="pre-nav-links" href="@Url.Action("Weather", "Home")">Weather Info</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="container">
+            <!-- Logo and responsive toggle -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="@Url.Action("Index","Home")"><img src="~/Content/img/yosemite_logo.jpg" alt="Yosemite Park Logo" width="120"></a>
+            </div>
+            <!-- Navbar links -->
+            <div class="collapse navbar-collapse" id="navbar">
+                <ul class="nav navbar-nav">
+                    <li>
+                        @Html.ActionLink("About", "About", "Home")
+                    </li>
+                    <li>
+                        @Html.ActionLink("Contact Us", "ContactUs", "Home")
+                    </li>
+                    <li>
+                        @Html.ActionLink("Mailing List","EmailSignUp","Home")
+                    </li>
+                    <li>
+                        <a href="#">Events</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+    <div>
+        @RenderBody()
+    </div>
+    <br />
+    <footer class="footer">
+        <h4>Experience Your America &trade;</h4>
+        <ul class="socialLinks">
+            <li>
+                <a href="//www.facebook.com/nationalparkservice">
+                    <span>Facebook</span>
+                </a>
+            </li>
+            <li>
+                <a href="//www.twitter.com/natlparkservice">
+                    <span>Twitter</span>
+                </a>
+            </li>
+            <li>
+                <a href="//www.instagram.com/nationalparkservice">
+                    <span>Instagram</span>
+                </a>
+            </li>
+        </ul>
+    </footer>
+</body>
+</html>

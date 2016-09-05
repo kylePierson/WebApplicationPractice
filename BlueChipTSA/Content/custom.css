@@ -1,0 +1,182 @@
+﻿body {
+	/*padding-top: 50px;
+	color: #959595;*/
+	}
+	
+h1, h2, h3, h4, h5, h6 {
+	color: black;
+	}
+
+.bark{
+    background: url(img/tree-bark-nav.jpg);
+}
+
+.bark div a{
+    color:navajowhite;
+    padding-right:8px;
+    padding-left:8px;
+}
+
+.pre-nav-links{
+    border-right:2px solid grey;
+}
+
+.bark div a:last-child{
+    border:none;
+}
+
+.bark div a:hover{
+  color: white;
+  font-weight:bold;
+  background-color: transparent;
+  text-decoration:none;
+}
+
+.desc_content{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding: 10px;
+    margin: 5px;
+    color: white;
+}
+
+.tr{
+    border-right:1px solid black;
+    border-left:1px solid black;
+}
+
+.pt{
+    height:240px;
+    padding-top:10%;
+    border-top:1px solid black;
+    border-left:1px solid black;
+    border-right:1px solid black;
+    
+}
+
+
+
+.plan-title{
+    font-size:35px;
+    text-align:center;
+    color:white;
+}
+
+.fix{
+    position:relative;
+    width: 100%;
+    padding: 0px;
+}
+	
+.feature {
+    background-image:url("../img/te_present_1600x1060.jpg");
+	/*background-color: yellowgreen;
+	color: greenyellow;*/
+	}
+
+.glyph-section{
+    text-align:center;
+}
+	
+.article-intro {
+    margin-bottom: 25px;
+}
+
+.footer-blurb {
+    padding: 30px 0;
+    background-color: goldenrod;
+    color: black;
+}
+    
+.footer-blurb-item {
+    padding: 30px;
+    }
+ 
+.small-print {
+	background-color: #fff;
+	padding: 30px 0;
+}
+
+.slide1, .slide2, .slide3 {
+    min-height: 400px;
+    
+    background-size: cover;
+    background-position: center center;
+}
+.slide1 {
+    background-image:url(img/yosemite-001.jpg);
+    /*background-image: url(http://placekitten.com/1000/300.jpg);*/
+}
+.slide2 {
+    background-image: url(img/yosemite-002.jpg);
+}
+.slide3 {
+    background-image: url(img/yosemite-003.jpg);
+}
+/* Carousel Fade Effect */
+.carousel.carousel-fade .item {
+    -webkit-transition: opacity 1s linear;
+    -moz-transition: opacity 1s linear;
+    -ms-transition: opacity 1s linear;
+    -o-transition: opacity 1s linear;
+    transition: opacity 1s linear;
+    opacity: .5;
+}
+.carousel.carousel-fade .active.item {
+    opacity: 1;
+}
+.carousel.carousel-fade .active.left,
+.carousel.carousel-fade .active.right {
+    left: 0;
+    z-index: 2;
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+.carousel-overlay {
+    position: absolute;
+    bottom: 100px;
+    right: 0;
+    left: 0;
+}
+
+footer h4 {
+    color:white;
+    margin-left:15px;
+}
+
+footer ul{
+    list-style-type:none;
+    margin:0;
+    padding:0;
+}
+
+footer ul li{
+    display:inline;
+    margin:15px;
+}
+
+footer ul li a{
+    text-align:center;
+    color:white;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  background-color: darkslategrey;
+  color:white;
+}

@@ -1,0 +1,64 @@
+﻿@model BlueChipTSA.Models.Park
+
+@{
+    ViewBag.Title = "About";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+<div class="container">
+    <h2>About @Model.Name</h2><h5>@Model.Location</h5>
+    <div class="row">
+        <div class="panel panel-default col-md-6 col-md-offset-3">
+            <div class="panel-heading">Established</div>
+            <div class="panel-body">@Model.EstablishDate.Date</div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="panel panel-default col-md-6 col-md-offset-3">
+            <div class="panel-heading">Description</div>
+            <div class="panel-body">@Model.Description</div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="panel panel-default col-md-6 col-md-offset-3">
+            <div class="panel-body">
+                <table style="text-align:center">
+                    <tr>
+                        <th>Area (acres)</th>
+                        <th>Annual Visitors</th>
+                    </tr>
+                    <tr>
+                        <td>@Model.Area</td>
+                        <td>@Model.AnnualVisitors</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="panel panel-default col-md-6 col-md-offset-3">
+            <div class="panel-heading">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" id="campgroundDropdown">
+                    Campgrounds
+                </a>
+            </div>
+            <div id="collapseOne" class="panel-collapse collapse">
+                <div class="panel-body">
+                    <ul>
+                        @foreach(var campground in Model.Campgrounds)
+                        {
+                            <li>@Html.ActionLink(campground.Name, "ViewCampground", new { campgroundId = campground.CampgroundId})</li>
+                        }
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+    $(function () { $('#collapseOne').collapse('hide') });
+</script>

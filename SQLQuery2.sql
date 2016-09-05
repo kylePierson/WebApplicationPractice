@@ -1,0 +1,1 @@
+SELECT * FROM campground, park WHERE campground.park_id=park.park_id AND park.park_id=1;
